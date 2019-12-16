@@ -8,9 +8,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Content="Button" Margin="0,89,0,0" VerticalAlignment="Top" 
-                HorizontalAlignment="Center" Height="251" Width="269" Click="Button_Click" CornerRadius="20"/>
+    <Grid Background="White">
+        <Button x:Name="NoAssistanceBtn" Margin="0,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="251" Width="269" Click="Button_Click" CornerRadius="20">
+            <TextBlock>
+                No Assistance
+            </TextBlock>
+        </Button>
 
     </Grid>
 </Page>

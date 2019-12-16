@@ -8,8 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button x:ConnectionId='2' Content="Button" Margin="0,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="251" Width="269"                     />
+    <Grid Background="White">
+        <Grid.Resources>
+            <ThemeShadow x:ConnectionId='2' x:Name="Shadow"></ThemeShadow>
+        </Grid.Resources>
+        <Button x:ConnectionId='3' x:Name="NoAssistanceBtn" Margin="0,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="251" Width="269"                      CornerRadius="20" Shadow="{StaticResource Shadow}">
+            <TextBlock>
+                No Assistance
+            </TextBlock>
+        </Button>
 
     </Grid>
 </Page>
