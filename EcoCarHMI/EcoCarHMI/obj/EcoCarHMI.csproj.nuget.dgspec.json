@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DevStark\\EC4-HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj": {}
+    "D:\\DevStark\\EcoCar_HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj": {}
   },
   "projects": {
-    "D:\\DevStark\\EC4-HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj": {
+    "D:\\DevStark\\EcoCar_HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DevStark\\EC4-HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj",
+        "projectUniqueName": "D:\\DevStark\\EcoCar_HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj",
         "projectName": "EcoCarHMI",
-        "projectPath": "D:\\DevStark\\EC4-HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj",
+        "projectPath": "D:\\DevStark\\EcoCar_HMI\\EcoCarHMI\\EcoCarHMI\\EcoCarHMI.csproj",
         "packagesPath": "C:\\Users\\Cameron\\.nuget\\packages\\",
-        "outputPath": "D:\\DevStark\\EC4-HMI\\EcoCarHMI\\EcoCarHMI\\obj\\",
+        "outputPath": "D:\\DevStark\\EcoCar_HMI\\EcoCarHMI\\EcoCarHMI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

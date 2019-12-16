@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>51cce743-0c22-4fd4-9ba5-025539e1e1bc</PackageIdentityName>
     <PackageIdentityPublisher>CN=Cameron</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>B9E88F1E93839186A45DDD9494922BDB525A2FB33823EA8C5B627C9D9280F357</RegisteredManifestChecksum>
+    <LayoutDir>D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>F954424B996B98C0818B54E5C529AD78DDBD393E7B6AF898A508F1C452C860FD</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>51cce743-0c22-4fd4-9ba5-025539e1e1bc_1.0.0.0_x86__twdrxseeygaem</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>51cce743-0c22-4fd4-9ba5-025539e1e1bc_twdrxseeygaem!App</RegisteredUserModeAppID>
     <RegisteredPackageID>51cce743-0c22-4fd4-9ba5-025539e1e1bc</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-05T23:09:06.479</Modified>
+      <Modified>2019-12-12T02:35:23.314</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\EcoCarHMI.exe">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\EcoCarHMI.exe">
       <PackagePath>entrypoint\EcoCarHMI.exe</PackagePath>
-      <Modified>2019-11-05T23:08:59.019</Modified>
+      <Modified>2019-12-12T02:35:22.678</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,67 +46,71 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T22:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2019-11-05T23:06:40.118</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-10-29T16:57:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\EcoCarHMI.xr.xml">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\EcoCarHMI.xr.xml">
       <PackagePath>EcoCarHMI.xr.xml</PackagePath>
-      <Modified>2019-11-05T23:08:58.779</Modified>
+      <Modified>2019-12-12T02:35:22.468</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-11-05T23:08:58.822</Modified>
+      <Modified>2019-12-12T02:35:22.502</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-11-05T23:08:58.822</Modified>
+      <Modified>2019-12-12T02:35:22.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\SelectionPage.xbf">
+      <PackagePath>SelectionPage.xbf</PackagePath>
+      <Modified>2019-12-12T02:35:22.503</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T21:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-11-05T23:09:00.118</Modified>
+      <Modified>2019-12-11T19:42:15.080</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\DevStark\EC4-HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\Core\EcoCarHMI.exe">
+    <AppxPackagedFile Include="D:\DevStark\EcoCar_HMI\EcoCarHMI\EcoCarHMI\bin\x86\Debug\Core\EcoCarHMI.exe">
       <PackagePath>EcoCarHMI.exe</PackagePath>
-      <Modified>2019-11-05T23:09:06.456</Modified>
+      <Modified>2019-12-12T02:35:23.305</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
