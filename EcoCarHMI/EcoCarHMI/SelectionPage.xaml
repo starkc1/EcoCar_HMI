@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
-        <Button x:Name="NoAssistanceBtn" Margin="0,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="251" Width="269" Click="Button_Click" CornerRadius="20">
-            <TextBlock>
+        <Button x:Name="NoAssistanceBtn" Margin="0,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="251" Width="269" Click="Button_Click" CornerRadius="20" RequestedTheme="Default" Background="#33C5C5C5">
+            <TextBlock Foreground="#FF232323" FontSize="20" Margin="0,85,1,-85" >
                 No Assistance
             </TextBlock>
         </Button>
