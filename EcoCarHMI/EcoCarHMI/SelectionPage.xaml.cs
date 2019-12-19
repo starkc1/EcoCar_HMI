@@ -28,14 +28,29 @@ namespace EcoCarHMI
             this.InitializeComponent();
         }
 
-        private void Page_Loaded(object sender, PointerRoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Shadow.Receivers.Add(NoAssistanceBtn);
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void NoAssistance_Click(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("Hello World");
+        }
+
+        private void DeafAssistance_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SightAssistance_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MobilityAssistance_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
