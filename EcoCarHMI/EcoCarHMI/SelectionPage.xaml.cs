@@ -26,16 +26,26 @@ namespace EcoCarHMI
         public SelectionPage()
         {
             this.InitializeComponent();
+            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            if (DateTime.Now.TimeOfDay < new TimeSpan(00, 08, 00, 0) || DateTime.Now.TimeOfDay > new TimeSpan(00, 20, 00, 0))
+            {
+                RequestedTheme = ElementTheme.Dark;
+            }
+            else
+            {
+                RequestedTheme = ElementTheme.Light;
+            }
 
         }
 
         private void NoAssistance_Click(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Hello World");
+            //RequestedTheme = ElementTheme.Dark;
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private void DeafAssistance_Click(object sender, RoutedEventArgs e)
@@ -50,7 +60,7 @@ namespace EcoCarHMI
 
         private void MobilityAssistance_Click(object sender, RoutedEventArgs e)
         {
-
+            //RequestedTheme = ElementTheme.Light;
         }
     }
 }
