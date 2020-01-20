@@ -26,5 +26,25 @@ namespace EcoCarHMI
         {
             this.InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (DateTime.Now.TimeOfDay < new TimeSpan(00, 08, 00, 0) || DateTime.Now.TimeOfDay > new TimeSpan(00, 20, 00, 0))
+            {
+                RequestedTheme = ElementTheme.Dark;
+            }
+            else
+            {
+                RequestedTheme = ElementTheme.Light;
+            }
+
+        }
+
+        private void Size_Changed(object sender, SizeChangedEventArgs e)
+        {
+            var bounds = Window.Current.Bounds;
+            this.NavBar.Width = bounds.Width;
+            //this.SideBar.Width = bounds.Width * .3;
+        }
     }
 }
