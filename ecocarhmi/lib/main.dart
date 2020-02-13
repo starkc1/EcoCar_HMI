@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        
+      theme: ThemeData( 
+        fontFamily: "OpenSans"
       ),
       //home: new SelectionPage(),
       routes: <String, WidgetBuilder>{
