@@ -10,10 +10,7 @@ class SelectionPageState extends State<SelectionPage> {
 
   @override
   void initState() {
-<<<<<<< HEAD
-    
-=======
->>>>>>> cde3b0602f131b18704d484f0eaa16ca527a8908
+
     super.initState();
   }
 
