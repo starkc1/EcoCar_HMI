@@ -1,4 +1,6 @@
 import 'package:ecocarhmi/pages/selection_page.dart';
+import './pages/main_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -14,11 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData( 
         fontFamily: "OpenSans"
       ),
-      //home: new SelectionPage(),
-      routes: <String, WidgetBuilder>{
-        '/' : (BuildContext context) => new SelectionPage(),
-        //'/NoAssitance' : (BuildContext context) => n
-      },
+      home: new MainPage(),
+      // routes: <String, WidgetBuilder>{
+      //   //'/' : (BuildContext context) => new SelectionPage(),
+      //   //'/NoAssitance' : (BuildContext context) => n
+      // },
     );
   }
 }

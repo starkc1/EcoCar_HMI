@@ -45,47 +45,30 @@ class SelectionPageState extends State<SelectionPage> {
             new SizedBox(
               height: 20,
             ),
-            new Container(
-              decoration: new BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  new BoxShadow(
-                    color: Colors.black26,
-                    blurRadius: 4
-                  )
-                ],
-                borderRadius: BorderRadius.all(
-                  Radius.circular(
-                    20
-                  )
-                )
-              ),
-              child: new Material(
-                color: Colors.transparent,
-                child: new InkWell(
-                  child: new Container(
-                    width: 400,
-                    decoration: new BoxDecoration(
-                      
-                    ),
-                    child: new Padding(
-                      padding: new EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 20
-                      ),
-                      child: new Text(
-                        "Continue Without Assistance",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(
-                          fontSize: 25
-                        ),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                  },
+            new SelectionButton(
+              backgroundColor: Colors.white,
+              width: 400,
+              content: new Text(
+                "Continue Without Assistance",
+                textAlign: TextAlign.center,
+                style: new TextStyle(
+                  fontSize: 24
                 ),
               ),
+              onTap: () {
+
+              },
+            ),
+            new SizedBox(
+              height: 100
+            ),
+            new Row(
+              children: <Widget>[
+                new SelectionButton(
+                  backgroundColor: Colors.white,
+                  width: 400,
+                )
+              ],
             )
           ],
         )
@@ -97,16 +80,23 @@ class SelectionPageState extends State<SelectionPage> {
 class SelectionButton extends StatelessWidget {
 
   Color backgroundColor;
+  Widget content;
+  double width;
+  VoidCallback onTap;
 
   SelectionButton(
     {
       this.backgroundColor,
+      this.content,
+      this.width,
+      this.onTap
     }
   );
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return new AnimatedContainer(
+      duration: new Duration(milliseconds: 700),
       decoration: new BoxDecoration(
         color: backgroundColor,
         boxShadow: [
@@ -121,11 +111,28 @@ class SelectionButton extends StatelessWidget {
           )
         ) 
       ),
+      width: width,
       child: new Material(
         borderRadius: BorderRadius.all(
           Radius.circular(
             20
           )
+        ),
+        clipBehavior: Clip.antiAlias,
+        color: Colors.transparent,
+        child: new InkWell(
+          child: new Container(
+            child: new Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 20,
+                horizontal: 20
+              ),
+              child: new Center(
+                child: content
+              ),
+            ),
+          ),
+          onTap: onTap,
         ),
       ),
     );
