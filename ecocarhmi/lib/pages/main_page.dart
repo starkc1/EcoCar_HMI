@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mapbox_gl/mapbox_gl.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:geolocator/geolocator.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -7,6 +10,71 @@ class MainPage extends StatefulWidget {
 }
 
 class MainPageState extends State<MainPage> {
+
+  CameraPosition currentLocation;
+  var currentLat;
+  var currentLng;
+  @override
+  void initState() {
+    super.initState();
+    _requestPermission(PermissionGroup.location);
+    setState(() {
+      currentLocation = CameraPosition(
+        target: LatLng(
+          37.0902,
+          -95.7192
+        ),
+        zoom: 5
+      );
+    });
+    _getLocation().then(
+      (position) {
+        print(position);
+        mapController.moveCamera(
+          CameraUpdate.newCameraPosition(
+            CameraPosition(
+              target: LatLng(
+                position.latitude,
+                position.longitude
+              ),
+              zoom: 13.5
+            )
+          )
+        );
+      }
+    );
+
+  }
+
+  Geolocator geolocator = Geolocator();
+  Future<Position> _getLocation() async {
+    var currentLocal;
+
+    try {
+      currentLocal = await geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.bestForNavigation
+      );
+    } catch (e) {
+      currentLocal = null;
+    }
+    print(currentLocal);
+
+    return currentLocal;
+  }
+
+  final PermissionHandler _permissionHandler = PermissionHandler();
+  Future<bool> _requestPermission(PermissionGroup permission) async {
+    var result = await _permissionHandler.requestPermissions([permission]);
+    if (result[permission] == PermissionStatus.granted) {
+      return true;
+    }
+    return false;
+  }
+
+  MapboxMapController mapController;
+  void _onMapCreated(MapboxMapController controller) {
+    mapController = controller;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +88,23 @@ class MainPageState extends State<MainPage> {
         child: new Stack(
           children: <Widget>[
             new AnimatedPositioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              duration: new Duration(milliseconds: 600),
+              child: new MapboxMap(
+                onMapCreated: _onMapCreated,
+                initialCameraPosition: currentLocation
+              ),
+            ),
+            new AnimatedPositioned(
               left: 30,
               top: 30,
               bottom: 30,
               duration: new Duration(milliseconds: 600),
               child: new AnimatedContainer(
-                width: 450,
+                width: 400,
                 duration: new Duration(milliseconds: 600),
                 decoration: new BoxDecoration(
                   color: Colors.white,
@@ -49,7 +128,7 @@ class MainPageState extends State<MainPage> {
             new AnimatedPositioned(
               duration: new Duration(milliseconds: 600),
               bottom: 30,
-              left: 500,
+              left: 450,
               right: 30,
               child: new AnimatedContainer(
                 height: 75,
