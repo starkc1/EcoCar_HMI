@@ -15,7 +15,9 @@ dependencies:
   usb_serial: ^0.2.3
   font_awesome_flutter: ^8.5.0
 
-  mapbox_gl: ^0.0.5
+  google_maps_flutter: ^0.5.24
+  # mapbox_gl: ^0.0.5
+  flare_flutter: ^2.0.1
   permission_handler: ^4.0.0
   geolocator: ^5.1.5
 

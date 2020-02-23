@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mapbox_gl/mapbox_gl.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -14,17 +14,17 @@ class MainPageState extends State<MainPage> {
   CameraPosition currentLocation;
   var currentLat;
   var currentLng;
+  GoogleMapController mapController;
   @override
   void initState() {
     super.initState();
-    _requestPermission(PermissionGroup.location);
+    //_requestPermission(PermissionGroup.location);
     setState(() {
       currentLocation = CameraPosition(
         target: LatLng(
-          37.0902,
-          -95.7192
+          0.0,
+          0.0
         ),
-        zoom: 5
       );
     });
     _getLocation().then(
@@ -71,10 +71,6 @@ class MainPageState extends State<MainPage> {
     return false;
   }
 
-  MapboxMapController mapController;
-  void _onMapCreated(MapboxMapController controller) {
-    mapController = controller;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,10 +89,21 @@ class MainPageState extends State<MainPage> {
               right: 0,
               bottom: 0,
               duration: new Duration(milliseconds: 600),
-              child: new MapboxMap(
-                onMapCreated: _onMapCreated,
-                initialCameraPosition: currentLocation
-              ),
+              child: new Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: new GoogleMap(
+                  mapType: MapType.normal,
+                  initialCameraPosition: currentLocation,
+                  onMapCreated: (GoogleMapController controller) {
+                    mapController = controller;
+                  },
+                ),
+              )
+              // child: new MapboxMap(
+              //   onMapCreated: _onMapCreated,
+              //   initialCameraPosition: currentLocation
+              // ),
             ),
             new AnimatedPositioned(
               left: 30,
