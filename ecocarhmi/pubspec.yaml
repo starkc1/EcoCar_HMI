@@ -19,6 +19,8 @@ dependencies:
   permission_handler: ^4.0.0
   geolocator: ^5.1.5
 
+  firebase_ml_vision: ^0.9.3
+
   #mlkit: ^0.15.0
   #speech_recognition: ^0.3.0+1
   #flutter_tts: ^0.8.7

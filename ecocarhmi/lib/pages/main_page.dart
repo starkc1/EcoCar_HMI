@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:ecocarhmi/services/eye_service.dart';
+
+import '../services/eye_service.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -14,10 +17,14 @@ class MainPageState extends State<MainPage> {
   CameraPosition currentLocation;
   var currentLat;
   var currentLng;
+
+  var eyeService = EyeService();
+  bool eyesOpen;
   @override
   void initState() {
     super.initState();
     _requestPermission(PermissionGroup.location);
+    _requestPermission(PermissionGroup.camera);
     setState(() {
       currentLocation = CameraPosition(
         target: LatLng(
@@ -26,6 +33,7 @@ class MainPageState extends State<MainPage> {
         ),
         zoom: 5
       );
+      eyesOpen = eyeService.getEyeStatus() as bool;
     });
     _getLocation().then(
       (position) {
@@ -147,6 +155,7 @@ class MainPageState extends State<MainPage> {
                     )
                   ]
                 ),
+                child: new Text(eyesOpen.toString(), textScaleFactor: 3,)
               ), 
             ),
           ],
