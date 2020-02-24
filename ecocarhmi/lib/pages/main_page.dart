@@ -1,7 +1,9 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:geolocator/geolocator.dart';
+
 
 class MainPage extends StatefulWidget {
 
@@ -72,6 +74,7 @@ class MainPageState extends State<MainPage> {
   }
 
 
+  bool active = false;
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -100,10 +103,6 @@ class MainPageState extends State<MainPage> {
                   },
                 ),
               )
-              // child: new MapboxMap(
-              //   onMapCreated: _onMapCreated,
-              //   initialCameraPosition: currentLocation
-              // ),
             ),
             new AnimatedPositioned(
               left: 30,
@@ -127,9 +126,35 @@ class MainPageState extends State<MainPage> {
                     )
                   ]
                 ),
-                child: new Column(
-                  
+                child: new Center(
+                  child: new GestureDetector(
+                    child: new AspectRatio(
+                      aspectRatio: 1,
+                      child: new Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 0,
+                          horizontal: 0
+                        ),
+                        child: new FlareActor(
+                          'assets/Vehicle.flr',
+                          alignment: Alignment.center,
+                          fit: BoxFit.contain,
+                          animation: active ? 'MoveLeftThenBack' : 'idle',
+                        ),
+                      )
+                    ),
+                    onTap: () {
+                      setState(() {
+                        active = !active;
+                      });
+                    },
+                  ),
                 ),
+                // child: new Column(
+                //   children: <Widget>[
+                    
+                //   ],
+                // ),
               ),
             ),
             new AnimatedPositioned(
