@@ -20,8 +20,9 @@ class MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
-    //_requestPermission(PermissionGroup.location);
+    _requestPermission(PermissionGroup.location);
     setState(() {
+      
       currentLocation = CameraPosition(
         target: LatLng(
           0.0,
@@ -29,7 +30,7 @@ class MainPageState extends State<MainPage> {
         ),
       );
     });
-    _getLocation().then(
+    getLocation().then(
       (position) {
         print(position);
         mapController.moveCamera(
@@ -48,20 +49,21 @@ class MainPageState extends State<MainPage> {
 
   }
 
-  Geolocator geolocator = Geolocator();
-  Future<Position> _getLocation() async {
-    var currentLocal;
-
-    try {
-      currentLocal = await geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.bestForNavigation
-      );
-    } catch (e) {
-      currentLocal = null;
-    }
-    print(currentLocal);
+  Geolocator geolocator = Geolocator()..forceAndroidLocationManager = true;
+  Future<Position> getLocation() async {
+    //Position currentLocal;
+    
+    Position currentLocal = await geolocator.getCurrentPosition(
+      desiredAccuracy: LocationAccuracy.best
+    );
 
     return currentLocal;
+  }
+
+  Future<GeolocationStatus> checkPermission() async {
+    GeolocationStatus status = await geolocator.checkGeolocationPermissionStatus();
+
+    return status;
   }
 
   final PermissionHandler _permissionHandler = PermissionHandler();
@@ -178,6 +180,27 @@ class MainPageState extends State<MainPage> {
                       color: Colors.black26
                     )
                   ]
+                ),
+                child: new Row(
+                  children: <Widget>[
+                    new RaisedButton(
+                      child: new Text(
+                        "Test Location"
+                      ),
+                      onPressed: () {
+                        getLocation().then(
+                          (position) {
+                            print(position.latitude);
+                          }
+                        );
+                        // checkPermission().then(
+                        //   (status) {
+                        //     print(status);
+                        //   }
+                        // );
+                      },
+                    )
+                  ],
                 ),
               ), 
             ),
