@@ -34,12 +34,6 @@ class MainPageState extends State<MainPage> {
         zoom: 5
       );
     });
-    // eyeService.getEyeStatus().then(
-    //   (boolean) {
-    //     print(boolean.toString());
-    //     eyesOpen = boolean;
-    //   }
-    // );
     _getLocation().then(
       (position) {
         print(position);
@@ -160,7 +154,12 @@ class MainPageState extends State<MainPage> {
                     )
                   ]
                 ),
-                child: new Text(eyesOpen.toString(), textScaleFactor: 3)
+                child: new GestureDetector(
+                  onTap: () {
+                    eyesOpen = eyeService.getBooleanStatus();
+                  },
+                  child: new Text(eyesOpen.toString(), textScaleFactor: 3)
+                ) 
               ), 
             ),
           ],
