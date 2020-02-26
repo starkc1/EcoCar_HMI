@@ -1,4 +1,6 @@
 import 'package:ecocarhmi/pages/selection_page.dart';
+import 'package:ecocarhmi/services/state_service.dart';
+import 'package:provider/provider.dart';
 import './pages/main_page.dart';
 
 import 'package:flutter/material.dart';
@@ -10,17 +12,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData( 
-        fontFamily: "OpenSans"
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<StateService>(
+          builder: (_) => StateService(),
+          child: MainPage(),
+        )
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData( 
+          fontFamily: "OpenSans"
+        ),
+        home: MainPage()
       ),
-      home: new MainPage(),
-      // routes: <String, WidgetBuilder>{
-      //   //'/' : (BuildContext context) => new SelectionPage(),
-      //   //'/NoAssitance' : (BuildContext context) => n
-      // },
     );
   }
 }

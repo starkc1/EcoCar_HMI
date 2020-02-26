@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:provider/provider.dart';
 
+import '../services/state_service.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -20,7 +22,8 @@ class MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
-    _requestPermission(PermissionGroup.location);
+    stateService.checkTimeOfDay();
+    //_requestPermission(PermissionGroup.location);
     setState(() {
       
       currentLocation = CameraPosition(
@@ -30,22 +33,22 @@ class MainPageState extends State<MainPage> {
         ),
       );
     });
-    getLocation().then(
-      (position) {
-        print(position);
-        mapController.moveCamera(
-          CameraUpdate.newCameraPosition(
-            CameraPosition(
-              target: LatLng(
-                position.latitude,
-                position.longitude
-              ),
-              zoom: 13.5
-            )
-          )
-        );
-      }
-    );
+    // getLocation().then(
+    //   (position) {
+    //     print(position);
+    //     mapController.moveCamera(
+    //       CameraUpdate.newCameraPosition(
+    //         CameraPosition(
+    //           target: LatLng(
+    //             position.latitude,
+    //             position.longitude
+    //           ),
+    //           zoom: 13.5
+    //         )
+    //       )
+    //     );
+    //   }
+    // );
 
   }
 
@@ -79,6 +82,11 @@ class MainPageState extends State<MainPage> {
   bool active = false;
   @override
   Widget build(BuildContext context) {
+    final appState = Provider.of<StateService>(context);
+    Color backgroundColor = appState.getBackgroundColor();
+    Color getTextColor = appState.getTextColor();
+
+
     return new Scaffold(
       resizeToAvoidBottomPadding: false,
       body: new AnimatedContainer(
@@ -115,7 +123,7 @@ class MainPageState extends State<MainPage> {
                 width: 400,
                 duration: new Duration(milliseconds: 600),
                 decoration: new BoxDecoration(
-                  color: Colors.white,
+                  color: backgroundColor,
                   borderRadius: new BorderRadius.all(
                     Radius.circular(
                       20
@@ -168,7 +176,7 @@ class MainPageState extends State<MainPage> {
                 height: 75,
                 duration: new Duration(milliseconds: 600),
                 decoration: new BoxDecoration(
-                  color: Colors.white,
+                  color: backgroundColor,
                   borderRadius: new BorderRadius.all(
                     Radius.circular(
                       20
@@ -185,17 +193,13 @@ class MainPageState extends State<MainPage> {
                   children: <Widget>[
                     new RaisedButton(
                       child: new Text(
-                        "Test Location"
+                        "Test"
                       ),
                       onPressed: () {
-                        getLocation().then(
-                          (position) {
-                            print(position.latitude);
-                          }
-                        );
-                        // checkPermission().then(
-                        //   (status) {
-                        //     print(status);
+                        stateService.setDarkTheme(false);
+                        // getLocation().then(
+                        //   (position) {
+                        //     print(position.latitude);
                         //   }
                         // );
                       },
