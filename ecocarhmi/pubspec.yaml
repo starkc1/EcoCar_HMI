@@ -21,6 +21,8 @@ dependencies:
 
   firebase_ml_vision: ^0.9.3
 
+  camera: ^0.5.7
+
   #mlkit: ^0.15.0
   #speech_recognition: ^0.3.0+1
   #flutter_tts: ^0.8.7

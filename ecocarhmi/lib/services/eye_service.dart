@@ -1,15 +1,46 @@
+import 'dart:io';
+import 'dart:ui';
+
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
+import 'package:camera/camera.dart';
 
-class EyeService {
+class StateService {
 
-  final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFilePath("C:/Users/Alex/Desktop/Young-Black-Man-Smiling-web.png");
+  CameraController cameraController;
+  bool eyesOpen;
+
+  StateService() {
+    availableCameras().then((cameras) => {
+      cameraController = CameraController(cameras[0], ResolutionPreset.max)
+    });
+    cameraController.initialize().then((x) => {
+      cameraController.startImageStream((image) => {
+        this.getEyeStatus(FirebaseVisionImage.fromBytes(image.planes[0].bytes, 
+        FirebaseVisionImageMetadata(
+          rawFormat: image.format.raw,
+          size: Size(image.width.toDouble(),image.height.toDouble()),
+          planeData: image.planes.map((currentPlane) => FirebaseVisionImagePlaneMetadata(
+            bytesPerRow: currentPlane.bytesPerRow,
+            height: currentPlane.height,
+            width: currentPlane.width
+            )).toList(),
+          rotation: ImageRotation.rotation90
+          )
+          )).then((boolean) => {
+            this.eyesOpen = boolean
+        })
+      })
+    });
+  }
 
   final FaceDetector faceDetector = FirebaseVision.instance.faceDetector(
     FaceDetectorOptions(enableClassification: true, enableLandmarks: true)
   );
 
-  Future<bool> getEyeStatus() async {
-    final List<Face> faces = await faceDetector.processImage(visionImage);
+  Future<bool> getEyeStatus(FirebaseVisionImage fbImage) async {
+    if(fbImage == null) return false;
+
+    final List<Face> faces = await faceDetector.processImage(fbImage);
 
     for (Face face in faces){
 
@@ -31,4 +62,4 @@ class EyeService {
 
 }
 
-final EyeService eyeService = EyeService();
+final StateService eyeService = StateService();

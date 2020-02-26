@@ -18,10 +18,10 @@ class MainPageState extends State<MainPage> {
   var currentLat;
   var currentLng;
 
-  var eyeService = EyeService();
+  var eyeService = StateService();
   bool eyesOpen;
   @override
-  void initState() {
+  void initState()  {
     super.initState();
     _requestPermission(PermissionGroup.location);
     _requestPermission(PermissionGroup.camera);
@@ -33,8 +33,13 @@ class MainPageState extends State<MainPage> {
         ),
         zoom: 5
       );
-      eyesOpen = eyeService.getEyeStatus() as bool;
     });
+    // eyeService.getEyeStatus().then(
+    //   (boolean) {
+    //     print(boolean.toString());
+    //     eyesOpen = boolean;
+    //   }
+    // );
     _getLocation().then(
       (position) {
         print(position);
@@ -155,7 +160,7 @@ class MainPageState extends State<MainPage> {
                     )
                   ]
                 ),
-                child: new Text(eyesOpen.toString(), textScaleFactor: 3,)
+                child: new Text(eyesOpen.toString(), textScaleFactor: 3)
               ), 
             ),
           ],
