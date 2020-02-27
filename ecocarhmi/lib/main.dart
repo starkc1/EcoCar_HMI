@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<StateService>(
-          builder: (_) => StateService(),
-          child: MainPage(),
+          builder: (_) => StateService()
         )
       ],
       child: MaterialApp(
