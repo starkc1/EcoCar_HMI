@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 //import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
@@ -13,61 +15,57 @@ class MapView extends StatefulWidget {
 
 class MapViewState extends State<MapView> {
 
+  CameraPosition currentLocation = new CameraPosition(
+    target: LatLng(0.0, 0.0)
+  );
   @override
   void initState() {
     super.initState();
-
+    currentLocation = new CameraPosition(
+      target: LatLng(0.0, 0.0)
+    );
   }
 
   Location location = new Location();
-  getPosition() async {
+  void getPosition() async {
 
     //PermissionStatus locationData = await location.hasPermission(); 
     LocationData locationData = await location.getLocation();
-    return locationData;
-    // await Geolocator().getCurrentPosition(
-    //           desiredAccuracy: 
-    //         ).then(
-    //           (result) {
-                
-    //             print(result);
-    //             return result;
-    //           }
-    //         ).catchError(
-    //           (error) {
-    //             print(error);
-    //           }
-    //         );
+    setState(() {
+      currentLocation = new CameraPosition(
+        target: LatLng(locationData.latitude, locationData.longitude),
+        zoom: 17.0,
+        tilt: 45.0
+      );
+    });
+    mapController.animateCamera(
+      CameraUpdate.newCameraPosition(
+        currentLocation
+      )
+    );
+  }
+
+  MapboxMapController mapController;
+  void onMapCreated(MapboxMapController controller) {
+    mapController = controller;
   }
 
   @override
   Widget build(BuildContext context) {
+    getPosition();
     return new Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      child: new Center(
-        child: new RaisedButton(
-          child: new Text(
-            "Test"
-          ),
-          onPressed: () {
-            getPosition().then(
-              (result) {
-                print(result);
-              }
-            );
-          },
-        )
+      child: new MapboxMap(
+        onMapCreated: onMapCreated,
+        styleString: MapboxStyles.LIGHT,
+        initialCameraPosition: currentLocation,
+        gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>[
+          Factory<OneSequenceGestureRecognizer>(
+            () => EagerGestureRecognizer(),
+          )
+        ].toSet(),
       )
-      
-      
-      // child: new GoogleMap(
-      //   mapType: MapType.hybrid,
-      //   initialCameraPosition: currentLocation,
-      //   onMapCreated: (GoogleMapController controller) {
-      //     mapController = controller;
-      //   },
-      // ),
     );
   }
 }

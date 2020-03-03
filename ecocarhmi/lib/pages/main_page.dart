@@ -62,28 +62,28 @@ class MainPageState extends State<MainPage> {
                   ]
                 ),
                 child: new Center(
-                  child: new GestureDetector(
-                    child: new AspectRatio(
-                      aspectRatio: 1,
-                      child: new Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 0,
-                          horizontal: 0
-                        ),
-                        child: new FlareActor(
-                          'assets/Vehicle.flr',
-                          alignment: Alignment.center,
-                          fit: BoxFit.contain,
-                          animation: active ? 'MoveLeftThenBack' : 'idle',
-                        ),
-                      )
-                    ),
-                    onTap: () {
-                      setState(() {
-                        active = !active;
-                      });
-                    },
-                  ),
+                  // child: new GestureDetector(
+                  //   child: new AspectRatio(
+                  //     aspectRatio: 1,
+                  //     child: new Padding(
+                  //       padding: EdgeInsets.symmetric(
+                  //         vertical: 0,
+                  //         horizontal: 0
+                  //       ),
+                  //       child: new FlareActor(
+                  //         'assets/Vehicle.flr',
+                  //         alignment: Alignment.center,
+                  //         fit: BoxFit.contain,
+                  //         animation: active ? 'MoveLeftThenBack' : 'idle',
+                  //       ),
+                  //     )
+                  //   ),
+                  //   onTap: () {
+                  //     setState(() {
+                  //       active = !active;
+                  //     });
+                  //   },
+                  // ),
                 ),
               ),
             ),
