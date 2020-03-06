@@ -1,5 +1,6 @@
 import 'package:ecocarhmi/pages/selection_page.dart';
 import 'package:ecocarhmi/services/state_service.dart';
+import 'package:ecocarhmi/services/vehicle_service.dart';
 import 'package:provider/provider.dart';
 import './pages/main_page.dart';
 
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<StateService>(
           builder: (_) => StateService()
+        ),
+        ChangeNotifierProvider<VehicleService>(
+          builder: (_) => VehicleService(),
         )
       ],
       child: MaterialApp(

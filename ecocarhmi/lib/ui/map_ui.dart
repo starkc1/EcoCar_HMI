@@ -7,6 +7,10 @@ import 'package:mapbox_gl/mapbox_gl.dart';
 //import 'package:geolocator/geolocator.dart';
 import 'package:location/location.dart';
 
+import 'package:provider/provider.dart';
+
+import '../services/state_service.dart';
+
 class MapView extends StatefulWidget {
 
   @override
@@ -52,13 +56,15 @@ class MapViewState extends State<MapView> {
 
   @override
   Widget build(BuildContext context) {
-    getPosition();
+    final appState = Provider.of<StateService>(context);
+    var style = appState.getMapTheme();
+    //getPosition();
     return new Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: new MapboxMap(
         onMapCreated: onMapCreated,
-        styleString: MapboxStyles.LIGHT,
+        styleString: style,
         initialCameraPosition: currentLocation,
         gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>[
           Factory<OneSequenceGestureRecognizer>(

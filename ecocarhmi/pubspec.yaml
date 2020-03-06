@@ -22,6 +22,8 @@ dependencies:
   #geolocator: ^5.1.5
   location: ^2.5.3
 
+  flutter_gauge: ^1.0.8
+
   #mlkit: ^0.15.0
   #speech_recognition: ^0.3.0+1
   #flutter_tts: ^0.8.7

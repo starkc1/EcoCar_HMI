@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mapbox_gl/mapbox_gl.dart';
 
 class StateService with ChangeNotifier {
 
@@ -39,6 +40,36 @@ class StateService with ChangeNotifier {
       return lightColor;
     } else {
       return darkColor;
+    }
+  }
+
+  getMapTheme() {
+    if (isDarkTheme) {
+      return MapboxStyles.DARK;
+    } else {
+      return MapboxStyles.LIGHT;
+    }
+  }
+
+  getGaugeColor() {
+    if (isDarkTheme) {
+      return new Color(0xFF01579B);
+    } else {
+      return new Color(0xFF00B0FF);
+    } 
+  }
+
+  getSectionShadow() {
+    if (isDarkTheme) {
+      return new BoxShadow(
+        blurRadius: 0,
+        color: Colors.transparent
+      );
+    } else {
+      return new BoxShadow(
+        blurRadius: 10,
+        color: Colors.black26
+      );
     }
   }
 

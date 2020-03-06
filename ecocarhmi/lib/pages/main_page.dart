@@ -1,7 +1,11 @@
+import 'package:ecocarhmi/services/vehicle_service.dart';
 import 'package:ecocarhmi/ui/map_ui.dart';
+import 'package:ecocarhmi/ui/vehicleSpeed_ui.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gauge/flutter_gauge.dart';
 import 'package:provider/provider.dart';
+
 
 import '../services/state_service.dart';
 
@@ -21,12 +25,19 @@ class MainPageState extends State<MainPage> {
 
   bool darkTheme = false;
   bool active = false;
+
+  double speed = vehicleService.getSpeed();
   @override
   Widget build(BuildContext context) {
     final appState = Provider.of<StateService>(context);
     appState.checkTimeOfDay();
     Color backgroundColor = appState.getBackgroundColor();
     Color getTextColor = appState.getTextColor();
+    BoxShadow sectionShadow = appState.getSectionShadow();
+    Color textColor = appState.getTextColor();
+    Color handColor = appState.getTextColor();
+    Color circleColor = appState.getGaugeColor();
+
 
 
     return new Scaffold(
@@ -45,6 +56,9 @@ class MainPageState extends State<MainPage> {
               bottom: 30,
               duration: new Duration(milliseconds: 600),
               child: new AnimatedContainer(
+                padding: EdgeInsets.symmetric(
+                  vertical: 10
+                ),
                 width: 400,
                 duration: new Duration(milliseconds: 600),
                 decoration: new BoxDecoration(
@@ -55,13 +69,62 @@ class MainPageState extends State<MainPage> {
                     )
                   ),
                   boxShadow: [
-                    new BoxShadow(
-                      blurRadius: 10,
-                      color: Colors.black26
-                    )
+                    sectionShadow
                   ]
                 ),
-                child: new Center(
+                child: new Column(
+                  children: <Widget>[
+                    new SizedBox(
+                      height: 175,
+                      width: 200,
+                      // child: new FlutterGauge(
+                      //   secondsMarker: SecondsMarker.none,
+                      //   widthCircle: 10,
+                      //   hand: Hand.short,
+                      //   circleColor: circleColor,
+                      //   handColor: handColor,
+                      //   number: Number.none,
+                      //   index: speed,
+                      //   fontFamily: 'Open Sans',
+                      //   counterStyle: TextStyle(
+                      //     color: textColor,
+                      //     fontSize: 45
+                      //   ),
+                      //   counterAlign: CounterAlign.center,
+                      //   isDecimal: false,
+                      //   start: 0,
+                      //   end: 100,
+                      // )
+                    ),
+                    new Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        new RaisedButton(
+                          child: new Text(
+                            "Speed Down"
+                          ),
+                          onPressed: () {
+                            vehicleService.changeSpeed(-1);
+                            setState(() {
+                              speed = vehicleService.getSpeed();
+                            });
+                          },
+                        ),
+                        new RaisedButton(
+                          child: new Text(
+                            "Speed Up"
+                          ),
+                          onPressed: () {
+                            vehicleService.changeSpeed(1);
+                            speed = vehicleService.getSpeed();
+                            
+                          },
+                        )
+                      ],
+                    )
+                  ],
+                )
+                //new Center(
                   // child: new GestureDetector(
                   //   child: new AspectRatio(
                   //     aspectRatio: 1,
@@ -84,7 +147,7 @@ class MainPageState extends State<MainPage> {
                   //     });
                   //   },
                   // ),
-                ),
+                //),
               ),
             ),
             new AnimatedPositioned(
@@ -103,10 +166,7 @@ class MainPageState extends State<MainPage> {
                     )
                   ),
                   boxShadow: [
-                    new BoxShadow(
-                      blurRadius: 10,
-                      color: Colors.black26
-                    )
+                    sectionShadow
                   ]
                 ),
                 child: new Row(
