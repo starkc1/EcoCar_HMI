@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gauge/flutter_gauge.dart';
 import 'package:provider/provider.dart';
+import 'dart:math' as math;
 
 import '../services/state_service.dart';
 
@@ -36,23 +37,38 @@ class VehicleSpeedViewState extends State<VehicleSpeedView> {
     Color handColor = appState.getTextColor();
     Color backgroundColor = appState.getGaugeColor();
     print(speed);
-    return new FlutterGauge(
-      secondsMarker: SecondsMarker.none,
-      widthCircle: 10,
-      hand: Hand.short,
-      circleColor: backgroundColor,
-      handColor: handColor,
-      number: Number.none,
-      index: speed,
-      fontFamily: 'Open Sans',
-      counterStyle: TextStyle(
-        color: textColor,
-        fontSize: 45
+    return new Container(
+      padding: EdgeInsets.symmetric(
+        vertical: 10
       ),
-      counterAlign: CounterAlign.center,
-      isDecimal: false,
-      
+      child: new CustomPaint(
+        size: Size(100, 100),
+        painter: SpeedPrinter(),
+      )
     );
   }
+}
+
+class SpeedPrinter extends CustomPainter {
+  
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rect = Rect.fromLTRB(0, 10, 200, 200);
+    final startAngle = math.pi;
+    final sweepAngle = (2 * math.pi) / 2;
+    final useCenter = false;
+    final paint = Paint()
+      ..color = new Color(0xFF00B0FF)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 10;
+    canvas.drawArc(rect, startAngle, sweepAngle, useCenter, paint);
+  }
+
+
+  @override
+  bool shouldRepaint(CustomPainter old) {
+    return true;
+  }
+
 }
 

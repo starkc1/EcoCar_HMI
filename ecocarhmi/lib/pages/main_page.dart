@@ -77,24 +77,9 @@ class MainPageState extends State<MainPage> {
                     new SizedBox(
                       height: 175,
                       width: 200,
-                      // child: new FlutterGauge(
-                      //   secondsMarker: SecondsMarker.none,
-                      //   widthCircle: 10,
-                      //   hand: Hand.short,
-                      //   circleColor: circleColor,
-                      //   handColor: handColor,
-                      //   number: Number.none,
-                      //   index: speed,
-                      //   fontFamily: 'Open Sans',
-                      //   counterStyle: TextStyle(
-                      //     color: textColor,
-                      //     fontSize: 45
-                      //   ),
-                      //   counterAlign: CounterAlign.center,
-                      //   isDecimal: false,
-                      //   start: 0,
-                      //   end: 100,
-                      // )
+                      child: VehicleSpeedView(
+                        speed: speed
+                      )
                     ),
                     new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
