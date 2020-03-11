@@ -4,16 +4,17 @@ class VehicleService with ChangeNotifier {
 
   double speed = 0.0;
 
-  changeSpeed(delta) {
-    if (speed >= 0) {
-      speed = speed + delta;
-    }
-    print(speed);
-    return speed;
+  void changeSpeed(delta) {
+    speed = delta;
+    notifyListeners();
   }
 
   getSpeed() {
     return speed;
+  }
+
+  getTurnSignalColor() {
+
   }
 
 }

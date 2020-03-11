@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 
 class StateService with ChangeNotifier {
@@ -43,13 +44,13 @@ class StateService with ChangeNotifier {
     }
   }
 
-  getMapTheme() {
-    if (isDarkTheme) {
-      return MapboxStyles.DARK;
-    } else {
-      return MapboxStyles.LIGHT;
-    }
-  }
+  // getMapTheme() {
+  //   if (isDarkTheme) {
+  //     return MapboxStyles.DARK;
+  //   } else {
+  //     return MapboxStyles.LIGHT;
+  //   }
+  // }
 
   getGaugeColor() {
     if (isDarkTheme) {
@@ -71,6 +72,27 @@ class StateService with ChangeNotifier {
         color: Colors.black26
       );
     }
+  }
+
+  getMapTheme() {
+    var mapStyle;
+
+    if (isDarkTheme) {
+      rootBundle.loadString('assets/map_dark.txt').then(
+        (string) {
+          mapStyle = string;
+        }
+      );
+    } else {
+      rootBundle.loadString('assets/map_light.txt').then(
+        (string) {
+          mapStyle = string;
+        }
+      );
+    }
+    print(mapStyle);
+
+    return mapStyle;
   }
 
 }

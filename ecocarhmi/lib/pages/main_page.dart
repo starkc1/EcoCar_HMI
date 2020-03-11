@@ -1,9 +1,7 @@
 import 'package:ecocarhmi/services/vehicle_service.dart';
 import 'package:ecocarhmi/ui/map_ui.dart';
-import 'package:ecocarhmi/ui/vehicleSpeed_ui.dart';
-import 'package:flare_flutter/flare_actor.dart';
+import 'package:ecocarhmi/ui/vehicle_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gauge/flutter_gauge.dart';
 import 'package:provider/provider.dart';
 
 
@@ -26,7 +24,7 @@ class MainPageState extends State<MainPage> {
   bool darkTheme = false;
   bool active = false;
 
-  double speed = vehicleService.getSpeed();
+  double speed = 20.0;
   @override
   Widget build(BuildContext context) {
     final appState = Provider.of<StateService>(context);
@@ -38,6 +36,8 @@ class MainPageState extends State<MainPage> {
     Color handColor = appState.getTextColor();
     Color circleColor = appState.getGaugeColor();
 
+    
+    final vehicleState = Provider.of<VehicleService>(context);
 
 
     return new Scaffold(
@@ -74,39 +74,7 @@ class MainPageState extends State<MainPage> {
                 ),
                 child: new Column(
                   children: <Widget>[
-                    new SizedBox(
-                      height: 175,
-                      width: 200,
-                      child: VehicleSpeedView(
-                        speed: speed
-                      )
-                    ),
-                    new Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        new RaisedButton(
-                          child: new Text(
-                            "Speed Down"
-                          ),
-                          onPressed: () {
-                            vehicleService.changeSpeed(-1);
-                            setState(() {
-                              speed = vehicleService.getSpeed();
-                            });
-                          },
-                        ),
-                        new RaisedButton(
-                          child: new Text(
-                            "Speed Up"
-                          ),
-                          onPressed: () {
-                            vehicleService.changeSpeed(1);
-                            speed = vehicleService.getSpeed();
-                            
-                          },
-                        )
-                      ],
-                    )
+                    new VehicleSpeed(),
                   ],
                 )
                 //new Center(

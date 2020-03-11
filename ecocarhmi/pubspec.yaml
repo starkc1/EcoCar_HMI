@@ -15,14 +15,12 @@ dependencies:
   usb_serial: ^0.2.3
   font_awesome_flutter: ^8.5.0
 
-  #google_maps_flutter: ^0.5.24
+  google_maps_flutter: ^0.5.24
   mapbox_gl: ^0.0.5
   flare_flutter: ^2.0.1
   permission_handler: ^4.0.0
-  #geolocator: ^5.1.5
-  location: ^2.5.3
-
-  flutter_gauge: ^1.0.8
+  geolocator: ^5.1.5
+  #location: ^2.5.3
 
   #mlkit: ^0.15.0
   #speech_recognition: ^0.3.0+1
