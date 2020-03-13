@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "500589163712",
+    "firebase_url": "https://ecocarhmi-8ba8f.firebaseio.com",
+    "project_id": "ecocarhmi-8ba8f",
+    "storage_bucket": "ecocarhmi-8ba8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500589163712:android:956cfdc83125d50ea8e925",
+        "android_client_info": {
+          "package_name": "com.example.ecocarhmi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500589163712-33udth7k9ssq1btqlc1gn9jjc97qsu72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeoyBrl7T3vPw-Y8NqgEzzWQAZcqKsTQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500589163712-33udth7k9ssq1btqlc1gn9jjc97qsu72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

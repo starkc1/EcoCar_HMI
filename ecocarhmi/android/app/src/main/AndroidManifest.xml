@@ -26,6 +26,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data
+      android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+      android:value="face" />
         <!-- <meta-data android:name="com.mapbox.token" android:value="pk.eyJ1Ijoic3RhcmtjMSIsImEiOiJjazZ0dHU4eXgwMnc0M3BxYzR1bmI3dXlxIn0.uH8qi9QOwMawXFCkxrZpQg" /> -->
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyBcl1mZMQohDvuH0RvnWJWGo1sse-vrAi8"/>

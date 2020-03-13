@@ -47,7 +47,7 @@ class VehicleSpeedState extends State<VehicleSpeed> {
             children: <Widget>[
               new Icon(
                 FontAwesomeIcons.arrowLeft,
-                size: 35
+                size: 35,
               ),
               new Column(
                 children: <Widget>[
@@ -61,7 +61,8 @@ class VehicleSpeedState extends State<VehicleSpeed> {
                   new Text(
                     "MPH",
                     style: new TextStyle(
-                      fontSize: 25
+                      fontSize: 25,
+                      color: textColor
                     )
                   )
                 ],

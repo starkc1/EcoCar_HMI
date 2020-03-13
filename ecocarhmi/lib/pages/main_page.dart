@@ -1,3 +1,5 @@
+import 'package:camera/camera.dart';
+import 'package:ecocarhmi/services/eye_service.dart';
 import 'package:ecocarhmi/services/vehicle_service.dart';
 import 'package:ecocarhmi/ui/map_ui.dart';
 import 'package:ecocarhmi/ui/vehicle_ui.dart';
@@ -9,16 +11,35 @@ import '../services/state_service.dart';
 
 class MainPage extends StatefulWidget {
 
+  final camera;
+
+  MainPage(
+    {
+      Key key,
+      @required this.camera
+    }
+  ) : super(key: key);
+
   @override
   MainPageState createState() => MainPageState();
 }
 
 class MainPageState extends State<MainPage> {
+  CameraController _controller;
+  Future<void> _initializeControllerFuture;
+
 
   bool loading = true;
   @override
   void initState() {
     super.initState();
+
+    _controller = CameraController(
+      widget.camera,
+      ResolutionPreset.high
+    );
+
+    _initializeControllerFuture = _controller.initialize();
   }
 
   bool darkTheme = false;
@@ -75,6 +96,24 @@ class MainPageState extends State<MainPage> {
                 child: new Column(
                   children: <Widget>[
                     new VehicleSpeed(),
+                    new Container(
+                      height: 700,
+                      child: new FutureBuilder(
+                        future: _initializeControllerFuture,
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState == ConnectionState.done) {
+                            EyeService eyeService = EyeService(_controller);
+                            eyeService.startCameraStream(_controller);
+                            return CameraPreview(_controller);
+                            
+                          } else {
+                            return new Center(
+                              child: new CircularProgressIndicator(),
+                            );
+                          }
+                        },
+                      ),
+                    )
                   ],
                 )
                 //new Center(
