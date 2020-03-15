@@ -5,11 +5,11 @@ import 'package:flutter/services.dart';
 class StateService with ChangeNotifier {
 
   bool isDarkTheme = false;
-  setDarkTheme(value) async {
-    isDarkTheme = value;
-    notifyListeners();
-    return isDarkTheme;
-  } 
+  // setDarkTheme(value) async {
+  //   isDarkTheme = value;
+  //   notifyListeners();
+  //   return isDarkTheme;
+  // } 
 
   checkTimeOfDay() {
     var now = new DateTime.now();
@@ -17,10 +17,10 @@ class StateService with ChangeNotifier {
     var sunrise = DateTime(now.year, now.month, now.day, 08, 00);
     var sunset = DateTime(now.year, now.month, now.day, 20, 00);
     if (time.isBefore(sunrise) || time.isAfter(sunset)) {
-      setDarkTheme(true);
+      //setDarkTheme(true);
       //print("true");
     } else if (time.isAfter(sunrise) || time.isBefore(sunset)) {
-      setDarkTheme(false);
+      //setDarkTheme(false);
       //print("false");
     }
   }

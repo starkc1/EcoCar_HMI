@@ -11,94 +11,55 @@ typedef HandleDetection = Future<dynamic> Function(FirebaseVisionImage image);
 class EyeService {
   CameraController _camera;
   bool eyesOpen;
+  bool _isDetecting = false;
 
   EyeService(camera) {
     print(camera);
-    //_camera = camera;
+    _camera = camera;
   }
 
   FirebaseVisionImageMetadata buildMetadata(CameraImage image) {
     return FirebaseVisionImageMetadata(
       rawFormat: image.format.raw,
-      size: Size(
-        image.width.toDouble(),
-        image.height.toDouble()
-      ),
+      size: Size(image.width.toDouble(), image.height.toDouble()),
       rotation: ImageRotation.rotation90,
-      planeData: image.planes.map(
-        (Plane plane) {
-          return FirebaseVisionImagePlaneMetadata(
+      planeData: image.planes.map((Plane plane) {
+        return FirebaseVisionImagePlaneMetadata(
             bytesPerRow: plane.bytesPerRow,
             height: plane.height,
-            width: plane.width
-          );
-        }
-      ).toList(),
+            width: plane.width);
+      }).toList(),
     );
   }
 
   Uint8List concatenatePlanes(List<Plane> planes) {
     final WriteBuffer allBytes = WriteBuffer();
 
-    planes.forEach(
-      (Plane plane) => allBytes.putUint8List(plane.bytes)
-    );
+    planes.forEach((Plane plane) => allBytes.putUint8List(plane.bytes));
     return allBytes.done().buffer.asUint8List();
   }
 
-  Future<dynamic> detect(CameraImage image) async {
-     final FirebaseVision mlVision = FirebaseVision.instance;
-    //, HandleDetection detectio
-    // return detection(
-    //   FirebaseVisionImage.fromBytes(
-    //     concatenatePlanes(image.planes), 
-    //     buildMetadata(image)
-    //   )
-    // );
-    return mlVision.faceDetector().processImage(
-      FirebaseVisionImage.fromBytes(
-        concatenatePlanes(image.planes), 
-        buildMetadata(image)
-      )
-    );
+  Future<dynamic> detect(CameraImage image, FaceDetector faceDetector) async {
+    return faceDetector.processImage(FirebaseVisionImage.fromBytes(
+        concatenatePlanes(image.planes), buildMetadata(image)));
   }
 
   bool detecting = false;
   Future startCameraStream(_camera) async {
     final FirebaseVision mlVision = FirebaseVision.instance;
+    final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
 
-    _camera.startImageStream(
-      (CameraImage image) {
-        // if (detecting) return;
-
-        // detecting = true;
-        detect(
-          image
-          // , 
-          // mlVision.faceDetector(
-          //   FaceDetectorOptions(
-          //     enableClassification: true,
-          //     enableLandmarks: true
-          //   )
-          // ).processImage
-        ).then(
-          (dynamic result) {
-            // if (result.length > 0) {
-            //   checkStatus(result);
-            //   detecting = true;
-            // } else {
-            //   detecting = false;
-            // }
-            print(result);
-            
-          }
-        ).catchError(
-          (error) {
-            detecting = false;
-          }
-        ); 
-      }
-    );
+    // _camera.startImageStream((CameraImage image) {
+    //   if(_isDetecting) return;
+    //   _isDetecting = true;
+    //   detect(image, faceDetector).then((dynamic result) {
+    //     print(result);
+    //   }).catchError((error) {
+    //     _isDetecting = false;
+    //   });
+    //   _isDetecting = false;
+    //   _camera.stopImageStream();
+    // });
   }
 
   checkStatus(List<Face> faces) {
@@ -107,8 +68,6 @@ class EyeService {
       print(face.rightEyeOpenProbability);
     }
   }
-
-
 
   // Future<bool> updateEyeStatus(FirebaseVisionImage fbImage) async {
   //   if (fbImage == null) return false;
