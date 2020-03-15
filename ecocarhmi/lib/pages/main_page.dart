@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:camera/camera.dart';
 import 'package:ecocarhmi/services/eye_service.dart';
 import 'package:ecocarhmi/services/vehicle_service.dart';
@@ -5,6 +7,8 @@ import 'package:ecocarhmi/ui/map_ui.dart';
 import 'package:ecocarhmi/ui/vehicle_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
 
 
 import '../services/state_service.dart';
@@ -27,7 +31,7 @@ class MainPage extends StatefulWidget {
 class MainPageState extends State<MainPage> {
   CameraController _controller;
   Future<void> _initializeControllerFuture;
-
+  EyeService eyeService = EyeService();
 
   bool loading = true;
   @override
@@ -42,9 +46,19 @@ class MainPageState extends State<MainPage> {
     _initializeControllerFuture = _controller.initialize();
   }
 
+  takePicture(CameraController camera) async {
+    final path = join(
+      (await getTemporaryDirectory()).path,
+      '${DateTime.now()}.png'
+    );
+
+    await camera.takePicture(path);
+    return path;    
+  }
+
   bool darkTheme = false;
   bool active = false;
-
+  var path;
   double speed = 20.0;
   @override
   Widget build(BuildContext context) {
@@ -60,7 +74,7 @@ class MainPageState extends State<MainPage> {
     
     final vehicleState = Provider.of<VehicleService>(context);
 
-
+    
     return new Scaffold(
       resizeToAvoidBottomPadding: false,
       body: new AnimatedContainer(
@@ -97,15 +111,30 @@ class MainPageState extends State<MainPage> {
                   children: <Widget>[
                     new VehicleSpeed(),
                     new Container(
-                      height: 700,
+                      height: 400,
                       child: new FutureBuilder(
                         future: _initializeControllerFuture,
                         builder: (context, snapshot) {
                           if (snapshot.connectionState == ConnectionState.done) {
-                            EyeService eyeService = EyeService(_controller);
-                            eyeService.startCameraStream(_controller);
-                            return CameraPreview(_controller);
-                            
+                            // EyeService eyeService = EyeService(_controller);
+                            // eyeService.startCameraStream(_controller).then(
+                            //   (result) {
+                            //     print(result);
+                            //     setState(() {
+                            //       path = result;
+                            //     });
+                            //   }
+                            // );
+                            // return CameraPreview(_controller);
+                            takePicture(_controller).then(
+                              (result) {
+                                eyeService.processImage(result);
+                                setState(() {
+                                  path = result;
+                                });
+                              }
+                            );
+                            return SizedBox();
                           } else {
                             return new Center(
                               child: new CircularProgressIndicator(),
@@ -113,6 +142,10 @@ class MainPageState extends State<MainPage> {
                           }
                         },
                       ),
+                    ),
+                    new Container(
+                      height: 300,
+                      child: path == null ? new SizedBox() : Image.file(File(path)),
                     )
                   ],
                 )

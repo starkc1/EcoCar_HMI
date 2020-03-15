@@ -1,53 +1,54 @@
+import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:camera/camera.dart';
-import 'dart:io';
+import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
 
-typedef HandleDetection = Future<dynamic> Function(FirebaseVisionImage image);
+
 
 class EyeService {
-  CameraController _camera;
-  bool eyesOpen;
-  bool _isDetecting = false;
+  // CameraController _camera;
+  // bool eyesOpen;
+  // bool _isDetecting = false;
 
-  EyeService(camera) {
-    print(camera);
-    _camera = camera;
+  EyeService() {
+    
   }
 
-  FirebaseVisionImageMetadata buildMetadata(CameraImage image) {
-    return FirebaseVisionImageMetadata(
-      rawFormat: image.format.raw,
-      size: Size(image.width.toDouble(), image.height.toDouble()),
-      rotation: ImageRotation.rotation90,
-      planeData: image.planes.map((Plane plane) {
-        return FirebaseVisionImagePlaneMetadata(
-            bytesPerRow: plane.bytesPerRow,
-            height: plane.height,
-            width: plane.width);
-      }).toList(),
-    );
-  }
+  // FirebaseVisionImageMetadata buildMetadata(CameraImage image) {
+  //   return FirebaseVisionImageMetadata(
+  //     rawFormat: image.format.raw,
+  //     size: Size(image.width.toDouble(), image.height.toDouble()),
+  //     rotation: ImageRotation.rotation90,
+  //     planeData: image.planes.map((Plane plane) {
+  //       return FirebaseVisionImagePlaneMetadata(
+  //           bytesPerRow: plane.bytesPerRow,
+  //           height: plane.height,
+  //           width: plane.width);
+  //     }).toList(),
+  //   );
+  // }
 
-  Uint8List concatenatePlanes(List<Plane> planes) {
-    final WriteBuffer allBytes = WriteBuffer();
+  // Uint8List concatenatePlanes(List<Plane> planes) {
+  //   final WriteBuffer allBytes = WriteBuffer();
 
-    planes.forEach((Plane plane) => allBytes.putUint8List(plane.bytes));
-    return allBytes.done().buffer.asUint8List();
-  }
+  //   planes.forEach((Plane plane) => allBytes.putUint8List(plane.bytes));
+  //   return allBytes.done().buffer.asUint8List();
+  // }
 
-  Future<dynamic> detect(CameraImage image, FaceDetector faceDetector) async {
-    return faceDetector.processImage(FirebaseVisionImage.fromBytes(
-        concatenatePlanes(image.planes), buildMetadata(image)));
-  }
+  // Future<dynamic> detect(CameraImage image, FaceDetector faceDetector) async {
+  //   return faceDetector.processImage(FirebaseVisionImage.fromBytes(
+  //       concatenatePlanes(image.planes), buildMetadata(image)));
+  // }
 
-  bool detecting = false;
-  Future startCameraStream(_camera) async {
-    final FirebaseVision mlVision = FirebaseVision.instance;
-    final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
+  //bool detecting = false;
+  //Future<String> startCameraStream(CameraController _camera) async {
+    //final FirebaseVision mlVision = FirebaseVision.instance;
+    //final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
+
 
     // _camera.startImageStream((CameraImage image) {
     //   if(_isDetecting) return;
@@ -60,6 +61,16 @@ class EyeService {
     //   _isDetecting = false;
     //   _camera.stopImageStream();
     // });
+  //}
+
+  void processImage(String path) async {
+    File image = File(path);
+    final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(image);
+    final FirebaseVision mlVision = FirebaseVision.instance;
+    final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
+
+    List<Face> faces = await faceDetector.processImage(visionImage);
+    checkStatus(faces);
   }
 
   checkStatus(List<Face> faces) {
@@ -68,6 +79,9 @@ class EyeService {
       print(face.rightEyeOpenProbability);
     }
   }
+
+  
+
 
   // Future<bool> updateEyeStatus(FirebaseVisionImage fbImage) async {
   //   if (fbImage == null) return false;
