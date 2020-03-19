@@ -70,7 +70,7 @@ class EyeService {
     final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
 
     List<Face> faces = await faceDetector.processImage(visionImage);
-    checkStatus(faces);
+    //checkStatus(faces);
   }
 
   checkStatus(List<Face> faces) {

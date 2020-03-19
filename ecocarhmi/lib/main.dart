@@ -1,5 +1,4 @@
 import 'package:camera/camera.dart';
-import 'package:ecocarhmi/pages/selection_page.dart';
 import 'package:ecocarhmi/services/state_service.dart';
 import 'package:ecocarhmi/services/vehicle_service.dart';
 import 'package:provider/provider.dart';
@@ -8,7 +7,7 @@ import './pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-//void main() => runApp(MyApp());
+//void main() => runApp(HMI());
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -17,15 +16,15 @@ Future<void> main() async {
   final camera = cameras[1];
 
   runApp(
-    MyApp(camera: camera)
+    HMI(camera: camera)
   );
 }
 
-class MyApp extends StatelessWidget {
+class HMI extends StatelessWidget {
 
   final camera;
 
-  MyApp(
+  HMI(
     {
       @required this.camera
     }

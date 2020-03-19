@@ -5,11 +5,11 @@ import 'package:flutter/services.dart';
 class StateService with ChangeNotifier {
 
   bool isDarkTheme = false;
-  // setDarkTheme(value) async {
-  //   isDarkTheme = value;
-  //   notifyListeners();
-  //   return isDarkTheme;
-  // } 
+  setDarkTheme(value) async {
+    isDarkTheme = value;
+    notifyListeners();
+    return isDarkTheme;
+  } 
 
   checkTimeOfDay() {
     var now = new DateTime.now();
@@ -27,10 +27,19 @@ class StateService with ChangeNotifier {
 
   Color blueGrey = new Color(0xFF263238);
   Color darkColor = new Color(0xFF212121);
+  Color lightDarkColor = new Color(0xFF3d3d3d);
   Color lightColor = new Color(0xFFFAFAFA);
   getBackgroundColor() {
     if (isDarkTheme) {
       return darkColor;
+    } else {
+      return lightColor;
+    }
+  }
+
+  getElevatedBackgroundColor() {
+    if (isDarkTheme) {
+      return lightDarkColor;
     } else {
       return lightColor;
     }
@@ -95,6 +104,10 @@ class StateService with ChangeNotifier {
     return mapStyle;
   }
 
+  
+  
+
 }
+enum SpeedUnits { MPH, KPH }
 
 final StateService stateService = StateService();

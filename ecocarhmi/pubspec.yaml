@@ -23,6 +23,9 @@ dependencies:
   geolocator: ^5.1.5
   path_provider: ^1.6.5
   #location: ^2.5.3
+  flutter_markdown: ^0.3.4
+
+  speech_to_text: ^1.1.0
 
   #mlkit: ^0.15.0
   #speech_recognition: ^0.3.0+1
