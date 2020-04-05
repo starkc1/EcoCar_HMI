@@ -17,7 +17,7 @@ class VehicleSpeedState extends State<VehicleSpeed> {
   Widget build(BuildContext context) {
     final vehicleState = Provider.of<VehicleService>(context);
     double speed = vehicleState.getSpeed();
-    Color turnSignalColor = vehicleState.getTurnSignalColor();
+    //Color turnSignalColor = vehicleState.getTurnSignalColor();
 
     final appState = Provider.of<StateService>(context);
     Color textColor = appState.getTextColor();

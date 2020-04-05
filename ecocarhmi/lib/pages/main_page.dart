@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
@@ -14,7 +15,7 @@ import 'package:provider/provider.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter/painting.dart';
-
+import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
@@ -62,6 +63,93 @@ class MainPageState extends State<MainPage> {
     _initializeControllerFuture = _controller.initialize();
   }
 
+  takePeriodicPicture() async {
+    await _initializeControllerFuture;
+    const period = const Duration(seconds: 7);
+
+    new Timer(
+      period,
+      () => takePicture(_controller).then(
+        (result) {
+          eyeService.processImage(result).then(
+            (faces) {
+              processFaces(faces);
+            }
+          );
+        }
+      )
+    );
+
+  }
+
+  processFaces(List<Face> faces) {
+    print(faces.length);
+    for (Face face in faces) {
+      eyeService.checkEyes(face).then(
+        (result) {
+          print(result);
+          if (!result) {
+            Scaffold.of(scaffoldContext).showSnackBar(
+              new SnackBar(
+                content: new Text(
+                  "Please Open Your Eyes And Pay Attention To The Road!",
+                  textAlign: TextAlign.center,
+                  style: new TextStyle(
+                    fontSize: 30
+                  ),
+                ),
+                backgroundColor: Colors.redAccent,
+                duration: new Duration(seconds: 2),
+              )
+            );
+          }
+        }
+      );
+
+
+
+      eyeService.checkHeadRotationX(face).then(
+        (result) {
+          print(result);
+          if (!result) {
+            Scaffold.of(scaffoldContext).showSnackBar(
+              new SnackBar(
+                content: new Text(
+                  "Please Look Straight Ahead And Pay Attention To The Road!",
+                  textAlign: TextAlign.center,
+                  style: new TextStyle(
+                    fontSize: 30
+                  ),
+                ),
+                backgroundColor: Colors.redAccent,
+                duration: new Duration(seconds: 2),
+              )
+            );
+          }
+        }
+      );
+
+      eyeService.checkHeadRotationY(face).then(
+        (result) {
+          print(result);
+          Scaffold.of(scaffoldContext).showSnackBar(
+            new SnackBar(
+              content: new Text(
+                "Please Look Straight Ahead And Pay Attention To The Road!",
+                textAlign: TextAlign.center,
+                style: new TextStyle(
+                  fontSize: 30
+                )
+              ),
+              backgroundColor: Colors.redAccent,
+              duration: new Duration(seconds: 2)
+            )
+          );
+        }
+      )
+    }
+  }
+
   setupSpeech() async {
     bool available = await speech.initialize(
       onStatus: statusListener,
@@ -94,15 +182,28 @@ class MainPageState extends State<MainPage> {
     } catch (e) {
       dir.deleteSync(recursive: true);
     }
+    
+    takePeriodicPicture();
     return path;    
   }
+
+  bool eyesOpen;
+  // void _eyeNotifier(context) {
+  //   if (!eyesOpen) {
+  //     Scaffold.of(context).showSnackBar(snackbar)
+  //   }
+  // }
+
 
   bool darkTheme = false;
   bool active = false;
   var prevPath;
   double speed = 20.0;
+
+  BuildContext scaffoldContext;
   @override
   Widget build(BuildContext context) {
+    takePeriodicPicture();
     final appState = Provider.of<StateService>(context);
     appState.checkTimeOfDay();
     Color backgroundColor = appState.getBackgroundColor();
@@ -116,6 +217,10 @@ class MainPageState extends State<MainPage> {
     final vehicleState = Provider.of<VehicleService>(context);
 
     
+
+    final eyeState = Provider.of<EyeService>(context);
+    eyesOpen = eyeState.areEyesOpen();
+    
     return new Scaffold(
       resizeToAvoidBottomPadding: false,
       body: new AnimatedContainer(
@@ -126,6 +231,12 @@ class MainPageState extends State<MainPage> {
         child: new Stack(
           children: <Widget>[
             //new MapView(),
+            new Builder(
+              builder: (BuildContext context) {
+                scaffoldContext = context;
+                return new SizedBox();
+              },
+            ),
             new AnimatedPositioned(
               left: 30,
               top: 30,
@@ -156,30 +267,6 @@ class MainPageState extends State<MainPage> {
                       right: 0,
                       child: new VehicleSpeed()
                     ),
-                    // new Container(
-                    //   height: 200,
-                    //   child: new FutureBuilder(
-                    //     future: _initializeControllerFuture,
-                    //     builder: (context, snapshot) {
-                    //       if (snapshot.connectionState == ConnectionState.done) {
-                    //         takePicture(_controller).then(
-                    //           (result) {
-                    //             //eyeService.processImage(result);
-                    //             setState(() {
-                    //               prevPath = result;
-                    //             });
-                    //           }
-                    //         );
-                    //         //return prevPath == null ? new SizedBox() : Image.file(File(prevPath));
-                    //         return SizedBox();
-                    //       } else {
-                    //         return new Center(
-                    //           child: new CircularProgressIndicator(),
-                    //         );
-                    //       }
-                    //     },
-                    //   ),
-                    // ),
                     new Positioned(
                       top: 120,
                       left: 0,

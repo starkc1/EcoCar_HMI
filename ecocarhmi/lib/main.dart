@@ -1,4 +1,5 @@
 import 'package:camera/camera.dart';
+import 'package:ecocarhmi/services/eye_service.dart';
 import 'package:ecocarhmi/services/state_service.dart';
 import 'package:ecocarhmi/services/vehicle_service.dart';
 import 'package:provider/provider.dart';
@@ -40,6 +41,9 @@ class HMI extends StatelessWidget {
         ),
         ChangeNotifierProvider<VehicleService>(
           builder: (_) => VehicleService(),
+        ),
+        ChangeNotifierProvider<EyeService>(
+          builder: (_) => EyeService(),
         )
       ],
       child: MaterialApp(

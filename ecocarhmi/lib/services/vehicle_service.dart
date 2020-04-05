@@ -4,8 +4,12 @@ class VehicleService with ChangeNotifier {
 
   double speed = 0.0;
 
-  void changeSpeed(delta) {
-    speed = delta;
+  // void changeSpeed(delta) {
+  //   speed = delta;
+  //   notifyListeners();
+  // }
+
+  void updateStatus() {
     notifyListeners();
   }
 
@@ -13,7 +17,15 @@ class VehicleService with ChangeNotifier {
     return speed;
   }
 
-  getTurnSignalColor() {
+  turnSignalStatus() {
+
+  }
+
+  lanePositionStatus() {
+
+  }
+
+  forwardProximityStatus() {
 
   }
 

@@ -1,82 +1,76 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
-import 'package:camera/camera.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
 
+class EyeService with ChangeNotifier {
 
+  EyeService();
 
-class EyeService {
-  // CameraController _camera;
-  // bool eyesOpen;
-  // bool _isDetecting = false;
-
-  EyeService() {
-    
-  }
-
-  // FirebaseVisionImageMetadata buildMetadata(CameraImage image) {
-  //   return FirebaseVisionImageMetadata(
-  //     rawFormat: image.format.raw,
-  //     size: Size(image.width.toDouble(), image.height.toDouble()),
-  //     rotation: ImageRotation.rotation90,
-  //     planeData: image.planes.map((Plane plane) {
-  //       return FirebaseVisionImagePlaneMetadata(
-  //           bytesPerRow: plane.bytesPerRow,
-  //           height: plane.height,
-  //           width: plane.width);
-  //     }).toList(),
-  //   );
-  // }
-
-  // Uint8List concatenatePlanes(List<Plane> planes) {
-  //   final WriteBuffer allBytes = WriteBuffer();
-
-  //   planes.forEach((Plane plane) => allBytes.putUint8List(plane.bytes));
-  //   return allBytes.done().buffer.asUint8List();
-  // }
-
-  // Future<dynamic> detect(CameraImage image, FaceDetector faceDetector) async {
-  //   return faceDetector.processImage(FirebaseVisionImage.fromBytes(
-  //       concatenatePlanes(image.planes), buildMetadata(image)));
-  // }
-
-  //bool detecting = false;
-  //Future<String> startCameraStream(CameraController _camera) async {
-    //final FirebaseVision mlVision = FirebaseVision.instance;
-    //final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
-
-
-    // _camera.startImageStream((CameraImage image) {
-    //   if(_isDetecting) return;
-    //   _isDetecting = true;
-    //   detect(image, faceDetector).then((dynamic result) {
-    //     print(result);
-    //   }).catchError((error) {
-    //     _isDetecting = false;
-    //   });
-    //   _isDetecting = false;
-    //   _camera.stopImageStream();
-    // });
-  //}
-
-  void processImage(String path) async {
+  processImage(String path) async {
     File image = File(path);
     final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(image);
     final FirebaseVision mlVision = FirebaseVision.instance;
     final faceDetector = mlVision.faceDetector(FaceDetectorOptions(enableClassification: true, enableLandmarks: true));
 
     List<Face> faces = await faceDetector.processImage(visionImage);
+    return faces;
     //checkStatus(faces);
   }
 
   checkStatus(List<Face> faces) {
-    print(faces);
+    print(faces.length);
     for (Face face in faces) {
-      print(face.rightEyeOpenProbability);
+      checkEyes(face);
+      checkHeadRotationY(face);
+      checkHeadRotationX(face);
+      
+      // if (face.leftEyeOpenProbability < 0.75 && face.rightEyeOpenProbability < 0.75) {
+      //   print("Eyes Probably Closed");
+      //   return;
+      // } else {
+      //   print("Eyes Open");
+      //   return;
+      // }
+      //print(face.rightEyeOpenProbability);
+    }
+  }
+
+  bool eyesOpen = true;
+  areEyesOpen() {
+    return eyesOpen;
+  }
+
+  checkEyes(Face face) async {
+    if (face.leftEyeOpenProbability < 0.75 && face.rightEyeOpenProbability < 0.75) {
+      eyesOpen = false;
+      return false;
+    } else {
+      return true;
+      //eyesOpen = true;
+      //print(eyesOpen);
+    }
+    
+  }
+
+  checkHeadRotationX(Face face) async {
+    double headRotation = face.headEulerAngleY;
+    print("Y Angle " + headRotation.toString());
+    if (headRotation > 30 || headRotation < -30) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  checkHeadRotationY(Face face) async {
+    double headRotation = face.headEulerAngleZ;
+    print("Z Angle " + headRotation.toString());
+    
+    if (headRotation > 30 || headRotation < -15) {
+      return false;
+    } else {
+      return true;
     }
   }
 
