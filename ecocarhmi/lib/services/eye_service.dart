@@ -19,7 +19,7 @@ class EyeService with ChangeNotifier {
   }
 
   checkStatus(List<Face> faces) {
-    print(faces.length);
+    //print(faces.length);
     for (Face face in faces) {
       checkEyes(face);
       checkHeadRotationY(face);
@@ -55,7 +55,7 @@ class EyeService with ChangeNotifier {
 
   checkHeadRotationX(Face face) async {
     double headRotation = face.headEulerAngleY;
-    print("Y Angle " + headRotation.toString());
+    //print("Y Angle " + headRotation.toString());
     if (headRotation > 30 || headRotation < -30) {
       return false;
     } else {
@@ -65,7 +65,7 @@ class EyeService with ChangeNotifier {
 
   checkHeadRotationY(Face face) async {
     double headRotation = face.headEulerAngleZ;
-    print("Z Angle " + headRotation.toString());
+    //print("Z Angle " + headRotation.toString());
     
     if (headRotation > 30 || headRotation < -15) {
       return false;

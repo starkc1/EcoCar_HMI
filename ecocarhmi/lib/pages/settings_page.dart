@@ -92,6 +92,7 @@ class SettingsPageState extends State<SettingsPage> {
                       setState(() {
                         _speedUnits = value;
                       });
+                      appState.setUnits();
                     },
                   ),
                 ),
@@ -109,6 +110,7 @@ class SettingsPageState extends State<SettingsPage> {
                       setState(() {
                         _speedUnits = value;
                       });
+                      appState.setUnits();
                     },
                   ),
                 )

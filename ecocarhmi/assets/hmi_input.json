@@ -1,0 +1,1132 @@
+[
+    {
+        "LandSpeedMph": 77.0,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 77.6711,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 78.342199999999991,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 79.013299999999987,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 79.684399999999982,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 80.355499999999978,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 81.026599999999974,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 81.697699999999969,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 82.368799999999965,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 83.03989999999996,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 83.710999999999956,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 84.382099999999951,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 85.053199999999947,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 85.724299999999943,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 86.395399999999938,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 87.066499999999934,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 87.737599999999929,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 88.408699999999925,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 89.079799999999921,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 89.750899999999916,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 90.421999999999912,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 91.093099999999907,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 91.7641999999999,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 92.4352999999999,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 93.1063999999999,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 93.77749999999989,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 94.448599999999885,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 95.119699999999881,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 95.790799999999876,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 96.461899999999872,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.0,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.04,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.08,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.12,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.2,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.24000000000000002,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.28,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.32,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.36,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.39999999999999997,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.43999999999999995,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.47999999999999993,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.51999999999999991,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.55999999999999994,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.6,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.64,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.68,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.72000000000000008,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.76000000000000012,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.80000000000000016,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.84000000000000019,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.88000000000000023,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.92000000000000026,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.9600000000000003,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 1.0000000000000002,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.96000000000000019,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.92000000000000015,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.88000000000000012,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.84000000000000008,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.8,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.76,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.72,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.67999999999999994,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.6399999999999999,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.59999999999999987,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.55999999999999983,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.5199999999999998,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.47999999999999982,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.43999999999999984,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.39999999999999986,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.35999999999999988,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.3199999999999999,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.27999999999999992,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.23999999999999991,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.1999999999999999,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.15999999999999989,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.11999999999999989,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.079999999999999877,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": 0.039999999999999876,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 97.132999999999868,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 96.461899999999872,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 95.790799999999876,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 95.119699999999881,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 94.448599999999885,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 93.77749999999989,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 93.1063999999999,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 92.4352999999999,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 91.7641999999999,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 91.093099999999907,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 90.421999999999912,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 89.750899999999916,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 89.079799999999921,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 88.408699999999925,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 87.737599999999929,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 87.066499999999934,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 86.395399999999938,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 85.724299999999943,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 85.053199999999947,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 84.382099999999951,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 83.710999999999956,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 83.03989999999996,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 82.368799999999965,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 81.697699999999969,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 81.026599999999974,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 80.355499999999978,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 79.684399999999982,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 79.013299999999987,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 78.342199999999991,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 77.6711,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 77.0,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 76.3289,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 75.657800000000009,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 74.986700000000013,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 74.315600000000018,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 73.644500000000022,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 72.973400000000026,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 72.302300000000031,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 71.631200000000035,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 70.96010000000004,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 70.289000000000044,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 69.617900000000049,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 68.946800000000053,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 68.275700000000057,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 67.604600000000062,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 66.933500000000066,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 66.262400000000071,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 65.591300000000075,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 64.920200000000079,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 64.249100000000084,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 63.578000000000081,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 62.906900000000078,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 62.235800000000076,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 61.564700000000073,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 60.89360000000007,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 60.222500000000068,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 59.551400000000065,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 58.880300000000062,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 58.20920000000006,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 57.538100000000057,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 56.867000000000054,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 56.195900000000051,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 55.524800000000049,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 54.853700000000046,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 54.182600000000043,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 53.511500000000041,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 52.840400000000038,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 52.169300000000035,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 51.498200000000033,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 50.82710000000003,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 50.156000000000027,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 49.484900000000025,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 48.813800000000022,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 48.142700000000019,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 47.471600000000016,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 46.800500000000014,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 46.129400000000011,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 45.458300000000008,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 44.787200000000006,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 44.1161,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 43.445,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 42.7739,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 42.102799999999995,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 41.431699999999992,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 40.76059999999999,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 40.089499999999987,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 39.418399999999984,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 38.747299999999981,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 38.076199999999979,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 37.405099999999976,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 36.733999999999973,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 36.062899999999971,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 35.391799999999968,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 34.720699999999965,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 34.049599999999963,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 33.37849999999996,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 32.707399999999957,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 32.036299999999954,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 31.365199999999955,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 30.694099999999956,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 30.022999999999957,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 29.351899999999958,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 28.680799999999959,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 28.00969999999996,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 27.33859999999996,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 26.667499999999961,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 25.996399999999962,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 25.325299999999963,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 24.654199999999964,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 23.983099999999965,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 23.311999999999966,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 22.640899999999966,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 21.969799999999967,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 21.298699999999968,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 20.627599999999969,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 19.95649999999997,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 19.285399999999971,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 18.614299999999972,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 17.943199999999973,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 17.272099999999973,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 16.600999999999974,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 15.929899999999975,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 15.258799999999976,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 14.587699999999977,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 13.916599999999978,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 13.245499999999979,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.0
+    },
+    {
+        "LandSpeedMph": 12.574399999999979,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.04
+    },
+    {
+        "LandSpeedMph": 11.90329999999998,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.08
+    },
+    {
+        "LandSpeedMph": 11.232199999999981,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.12
+    },
+    {
+        "LandSpeedMph": 10.561099999999982,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.16
+    },
+    {
+        "LandSpeedMph": 9.8899999999999828,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.2
+    },
+    {
+        "LandSpeedMph": 9.2188999999999837,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.24000000000000002
+    },
+    {
+        "LandSpeedMph": 8.5477999999999845,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.28
+    },
+    {
+        "LandSpeedMph": 7.8766999999999845,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.32
+    },
+    {
+        "LandSpeedMph": 7.2055999999999845,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.36
+    },
+    {
+        "LandSpeedMph": 6.5344999999999844,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.39999999999999997
+    },
+    {
+        "LandSpeedMph": 5.8633999999999844,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.43999999999999995
+    },
+    {
+        "LandSpeedMph": 5.1922999999999844,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.47999999999999993
+    },
+    {
+        "LandSpeedMph": 4.5211999999999843,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.51999999999999991
+    },
+    {
+        "LandSpeedMph": 3.8500999999999843,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.55999999999999994
+    },
+    {
+        "LandSpeedMph": 3.1789999999999843,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.6
+    },
+    {
+        "LandSpeedMph": 2.5078999999999843,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.64
+    },
+    {
+        "LandSpeedMph": 1.8367999999999842,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.68
+    },
+    {
+        "LandSpeedMph": 1.1656999999999842,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.72000000000000008
+    },
+    {
+        "LandSpeedMph": 0.49459999999998416,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.76000000000000012
+    },
+    {
+        "LandSpeedMph": 0.0,
+        "HorizontalPosition": -1.2490009027033011E-16,
+        "ForwardProximity": 0.8
+    }
+]

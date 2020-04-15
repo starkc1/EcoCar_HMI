@@ -1,33 +1,26 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 
 class VehicleService with ChangeNotifier {
 
-  double speed = 0.0;
+  bool accActive = true;
 
-  // void changeSpeed(delta) {
-  //   speed = delta;
-  //   notifyListeners();
-  // }
-
-  void updateStatus() {
-    notifyListeners();
+  Future<String> _loadAsset() async {
+    return await rootBundle.loadString('assets/hmi_input.json');
   }
 
-  getSpeed() {
-    return speed;
+  Future<String> loadData() async {
+    return await _loadAsset();
   }
 
-  turnSignalStatus() {
-
+  void changeACCStatus() {
+    accActive = !accActive;
   }
 
-  lanePositionStatus() {
 
-  }
-
-  forwardProximityStatus() {
-
-  }
 
 }
 

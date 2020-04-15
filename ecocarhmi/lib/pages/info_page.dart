@@ -131,7 +131,7 @@ class InfoPageState extends State<InfoPage> {
                   children: <Widget>[
                     new Card(
                       color: elevatedBackgroundColor,
-                      elevation: darkTheme ? 10 : 2,
+                      elevation: darkTheme ? 2 : 5,
                       child: new ListTile(
                         title: new Text(
                           "ACC Features",
@@ -155,7 +155,7 @@ class InfoPageState extends State<InfoPage> {
                       ),
                     ),
                     new Card(
-                      elevation: darkTheme ? 10 : 2,
+                      elevation: darkTheme ? 2 : 5,
                       color: elevatedBackgroundColor,
                       child: new ListTile(
                         title: new Text(

@@ -11,6 +11,16 @@ class StateService with ChangeNotifier {
     return isDarkTheme;
   } 
 
+  bool isKPH = false;
+  getUnits() {
+    return isKPH;
+  }
+
+  setUnits() {
+    isKPH = !isKPH;
+    notifyListeners();
+  }
+
   checkTimeOfDay() {
     var now = new DateTime.now();
     var time = DateTime.parse(now.toString());
